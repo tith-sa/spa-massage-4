@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="icon" href="../assets/image/spa.png" />
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .progress_bar {
+        width: 250%;
+        background-color: #6e5e5e;
+        border-radius: 20px;
+        margin: 10px 0;
+        position: relative;
+        height: 30px;
+        overflow: hidden;
+        margin-left: -150%;
+      }
+      .progress_bar span {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+      }
+      .progress_fill {
+        height: 100%;
+        width: 0;
+        background-color: #96bf8a;
+        border-radius: 20px;
+        text-align: right;
+        padding-right: 20px;
+        line-height: 30px;
+        color: white;
+        font-weight: bold;
+        transition: width 2s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-white border-lime-10 px-4 lg:px-6 py-2.5 dark:bg-lime-10">
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+        >
+          <img
+            src="../assets/image/spa.png"
+            class="mr-4 h-7 sm:h-10"
+            alt="Flowbite Logo"
+          />
+
+          <div class="flex items-center lg:order-2">
+            <a href="">
+              <svg
+                class="w-7 h-8 text-gray-800 dark:text-dark mr-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+                />
+              </svg>
+            </a>
+            <!-- <a
+              href="#"
+              class="text-lime-800 dark:text-dark hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-lime-200 focus:outline-none dark:focus:ring-gray-800"
+              >Book Now</a
+            > -->
+            <button
+              class="bg-[#96BF8A] hover:bg-[#00FFFF] text-dark-700 font-semibold hover:text-dark py-2 px-4 border border-lime-200 hover:border-transparent rounded"
+            >
+              Book Now
+            </button>
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              class="bg-[#96BF8A] hover:bg-[#00FFFF] text-dark-700 font-semibold hover:text-dark py-2 px-4 border border-lime-200 hover:border-transparent rounded-lg"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <!-- <span class="sr-only">Open main menu</span> -->
+
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >Home</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >Shop
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >FQA
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-dark-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-dark-400 lg:dark:hover:text-dark dark:hover:bg-lime-700 dark:hover:text-lime-300 lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold"
+                  >Contect
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8"
+    >
+      <div class="max-w-lg space-y-4 text-center md:text-left">
+        <h2 class="text-4xl ml-5 relative mt-5 font-bold text-[#96BF8A]">
+          Golden Spa
+        </h2>
+        <p class="text-lg ml-5">
+          A spa is a location where mineral-rich spring water (and sometimes
+          seawater) is used to give medicinal baths. Spa towns or spa resorts
+          (including hot springs resorts) typically offer various health
+          treatments, which are also known as balneotherapy. The belief in the
+          curative powers of mineral waters goes back to prehistoric times.
+        </p>
+
+        <div class="flex flex-wrap justify-between items-center">
+          <div class="flex items-center">
+            <svg
+              class="w-6 h-6 ml-1 dark:text-[#96BF8A]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            <p class="text-base ml-2">Relaxation</p>
+          </div>
+
+          <div class="flex items-center">
+            <svg
+              class="w-6 h-6 ml-10 dark:text-[#96BF8A]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            <p class="text-base ml-2">Best Price</p>
+          </div>
+
+          <div class="flex items-center">
+            <svg
+              class="w-6 h-6 ml-10 dark:text-[#96BF8A]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            <p class="text-base ml-2">Healthy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 md:mt-0">
+        <img
+          src="../assets/image/1.png"
+          alt="Relaxing Spa Woman"
+          class="w-full max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md ml-0 md:ml-[35px] rounded me-0 md:me-[150px]"
+        />
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8"
+    >
+      <div class="max-w-lg space-y-4 text-center md:text-left">
+        <h2 class="text-4xl ml-5 relative mt-5 font-bold text-[#96BF8A]">
+          Our Skills
+        </h2>
+        <p class="text-lg ml-5">
+          They need a big smile. To-morrow the gate was said to be small but
+          large. There is no airline developer. Mauris flatters the elit, needs
+          the tincidunt nibh pulvinar a. The classroom is flattering to put it
+          to God. Everyone wants to except, the price to be in lacinia, for that
+          element.
+        </p>
+      </div>
+
+      <div class="elementor-column elementor-col-100 mt-5 w-full">
+        <div class="elementor-widget-wrap">
+          <h4 class="text-[#96BF8A] ml-[30%] text-2xl">Oil Massage</h4>
+          <div class="progress_bar">
+            <div class="progress_fill" data-progress="96">96%</div>
+          </div>
+          <h4 class="text-[#96BF8A] ml-[30%] text-2xl">Shiatsu</h4>
+          <div class="progress_bar">
+            <div class="progress_fill" data-progress="87">87%</div>
+          </div>
+          <h4 class="text-[#96BF8A] ml-[30%] text-2xl">Foot Massage</h4>
+          <div class="progress_bar">
+            <div class="progress_fill" data-progress="92">92%</div>
+          </div>
+          <h4 class="text-[#96BF8A] ml-[30%] text-2xl">Face Treatment</h4>
+          <div class="progress_bar">
+            <div class="progress_fill" data-progress="95">95%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress_fill");
+        progressBars.forEach((bar) => {
+          let progressValue = bar.getAttribute("data-progress");
+          bar.style.width = progressValue + "%";
+        });
+      });
+    </script>
+
+    <style>
+      .progress_bar {
+        width: 100%;
+        max-width: 270px; /* Ensures the bar fits on small screens */
+        background-color: #6e5e5e;
+        border-radius: 20px;
+        margin: 10px auto; /* Centers on mobile */
+        position: relative;
+        height: 30px;
+        overflow: hidden;
+      }
+
+      .progress_fill {
+        height: 100%;
+        width: 0;
+        background-color: #96bf8a;
+        border-radius: 20px;
+        text-align: right;
+        padding-right: 20px;
+        line-height: 30px;
+        color: white;
+        font-weight: bold;
+        transition: width 2s ease-in-out;
+      }
+    </style>
+
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  </body>
+</html>

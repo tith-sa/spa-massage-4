@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleAccordion(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            const isOpen = content.classList.contains('hidden');
+
+            // Close all accordions
+            document.querySelectorAll('.faq-content').forEach((el) => el.classList.add('hidden'));
+            document.querySelectorAll('.icon').forEach((el) => el.textContent = '+');
+
+            // Open the clicked accordion
+            if (isOpen) {
+                content.classList.remove('hidden');
+                icon.textContent = '-';
+            }
+        }
+    </script>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-lg p-5 bg-white rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-5">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(1)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    What is the difference between a spa and a massage center?
+                    <span id="icon-1" class="icon">+</span>
+                </button>
+                <div id="faq-content-1" class="faq-content hidden px-4 py-3 bg-white">
+                    A spa offers various treatments like facials, body scrubs, and massages, while a massage center focuses mainly on different types of massages.
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(2)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    What types of massages are most popular?
+                    <span id="icon-2" class="icon">+</span>
+                </button>
+                <div id="faq-content-2" class="faq-content hidden px-4 py-3 bg-white">
+                    Swedish, deep tissue, hot stone, aromatherapy, and Thai massages are among the most popular types.
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(3)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    How long does a typical spa massage session last?
+                    <span id="icon-3" class="icon">+</span>
+                </button>
+                <div id="faq-content-3" class="faq-content hidden px-4 py-3 bg-white">
+                    Sessions usually last between 30 to 90 minutes, depending on the treatment chosen.
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(4)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    Should I eat before a massage?
+                    <span id="icon-4" class="icon">+</span>
+                </button>
+                <div id="faq-content-4" class="faq-content hidden px-4 py-3 bg-white">
+                    It’s best to eat a light meal at least an hour before to avoid discomfort during the session.
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(5)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    Can massage help with stress and anxiety?
+                    <span id="icon-5" class="icon">+</span>
+                </button>
+                <div id="faq-content-5" class="faq-content hidden px-4 py-3 bg-white">
+                    Yes, massages promote relaxation, reduce cortisol levels, and enhance overall mental well-being.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .accordion-content {
+            display: none;
+        }
+        .accordion-content.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleAccordion(index) {
+            const content = document.getElementById(`accordion-content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            const isActive = content.classList.contains('active');
+
+            // Close all accordion contents
+            document.querySelectorAll('.accordion-content').forEach((el) => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.icon').forEach((el) => {
+                el.textContent = '+';
+            });
+
+            // Toggle the clicked accordion
+            if (!isActive) {
+                content.classList.add('active');
+                icon.textContent = '-';
+            }
+        }
+    </script>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-lg p-5 bg-white rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-5">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(1)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    What is the difference between a spa and a massage center?
+                    <span id="icon-1" class="icon">+</span>
+                </button>
+                <div id="accordion-content-1" class="accordion-content px-4 py-3 bg-white">
+                    A spa offers various treatments like facials, body scrubs, and massages, while a massage center focuses mainly on different types of massages.
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(2)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    What types of massages are most popular?
+                    <span id="icon-2" class="icon">+</span>
+                </button>
+                <div id="accordion-content-2" class="accordion-content px-4 py-3 bg-white">
+                    Swedish, deep tissue, hot stone, aromatherapy, and Thai massages are among the most popular types.
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(3)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    How long does a typical spa massage session last?
+                    <span id="icon-3" class="icon">+</span>
+                </button>
+                <div id="accordion-content-3" class="accordion-content px-4 py-3 bg-white">
+                    Sessions usually last between 30 to 90 minutes, depending on the treatment chosen.
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(4)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    Should I eat before a massage?
+                    <span id="icon-4" class="icon">+</span>
+                </button>
+                <div id="accordion-content-4" class="accordion-content px-4 py-3 bg-white">
+                    It’s best to eat a light meal at least an hour before to avoid discomfort during the session.
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="border rounded-lg">
+                <button onclick="toggleAccordion(5)" class="w-full text-left px-4 py-3 bg-gray-200 hover:bg-gray-300 flex justify-between items-center">
+                    Can massage help with stress and anxiety?
+                    <span id="icon-5" class="icon">+</span>
+                </button>
+                <div id="accordion-content-5" class="accordion-content px-4 py-3 bg-white">
+                    Yes, massages promote relaxation, reduce cortisol levels, and enhance overall mental well-being.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="icon" href="../assets/image/spa.png" />
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    .progress_bar {
+      width: 250%;
+      background-color: #6e5e5e;
+      border-radius: 20px;
+      margin: 10px 0;
+      position: relative;
+      height: 30px;
+      overflow: hidden;
+      margin-left: -150%;
+    }
+
+    .progress_bar span {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+    }
+
+    .progress_fill {
+      height: 100%;
+      width: 0;
+      background-color: #96bf8a;
+      border-radius: 20px;
+      text-align: right;
+      padding-right: 20px;
+      line-height: 30px;
+      color: white;
+      font-weight: bold;
+      transition: width 2s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="bg-white border-lime-10 px-4 lg:px-6 py-2.5 dark:bg-lime-10">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <img src="../assets/image/spa.png" class="mr-4 h-7 sm:h-10" alt="Flowbite Logo" />
+
+        <div class="flex items-center lg:order-2">
+          <a href="">
+            <svg class="w-7 h-8 text-gray-800 dark:text-dark mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+            </svg>
+          </a>
+          <button
+            class="bg-[#90EE90] hover:bg-[#00FFFF] text-dark-700 font-semibold hover:text-dark py-2 px-4 border border-lime-200 hover:border-transparent rounded font-serif">
+            Book Now
+          </button>
+          <button data-collapse-toggle="mobile-menu-2" type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-[#96BF8A] rounded-lg lg:hidden hover:bg-[#00FFFF] focus:outline-none focus:ring-[#00FFFF] focus:ring-[#96BF8A] dark:text-[#96BF8A] dark:hover:bg-[#00FFFF] dark:focus:ring-[#96BF8A]"
+            aria-controls="mobile-menu-2" aria-expanded="false">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-serif lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a href="/spa-massage-4/index.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">About</a>
+            </li>
+            <li>
+              <a href="services.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">Services
+              </a>
+            </li>
+            <li>
+              <a href="shop.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">Shop
+              </a>
+            </li>
+            <li>
+              <a href="faq.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">FQA
+              </a>
+            </li>
+            <li>
+              <a href="blog.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">Blog
+              </a>
+            </li>
+            <li>
+              <a href="contact.html"
+                class="block py-2 pr-4 pl-3 text-dark-700 border-b border-dark-100 hover:bg-[#00FFFF] lg:hover:bg-transparent lg:border-0 lg:hover:text-[#90EE90] lg:p-0 dark:text-[#90EE90] lg:dark:hover:text-[#00FFFF] dark:hover:bg-[#90EE90] dark:hover:text-dark lg:dark:hover:bg-transparent dark:border-dark-700 font-semibold">Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8 font-serif">
+    <div class="max-w-lg space-y-4 text-center md:text-left">
+      <h2 class="text-4xl ml-5 relative mt-5 font-bold text-[#90EE90]">
+        Golden Spa
+      </h2>
+      <p class="text-lg ml-5">
+        A spa is a location where mineral-rich spring water (and sometimes
+        seawater) is used to give medicinal baths. Spa towns or spa resorts
+        (including hot springs resorts) typically offer various health
+        treatments, which are also known as balneotherapy. The belief in the
+        curative powers of mineral waters goes back to prehistoric times.
+      </p>
+
+      <div class="flex flex-wrap justify-between items-center">
+        <div class="flex items-center">
+          <svg class="w-6 h-6 ml-1 dark:text-[#90EE90]" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <p class="text-base ml-2">Relaxation</p>
+        </div>
+
+        <div class="flex items-center">
+          <svg class="w-6 h-6 ml-10 dark:text-[#90EE90]" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <p class="text-base ml-2">Best Price</p>
+        </div>
+
+        <div class="flex items-center">
+          <svg class="w-6 h-6 ml-10 dark:text-[#90EE90]" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <p class="text-base ml-2">Healthy</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 md:mt-0">
+      <img src="../assets/image/1.png" alt="Relaxing Spa Woman"
+        class="w-full max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md ml-0 md:ml-[35px] rounded me-0 md:me-[150px]" />
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8 font-serif">
+    <div class="max-w-lg space-y-4 text-center md:text-left">
+      <h2 class="text-4xl ml-5 relative mt-5 font-bold text-[#90EE90]">
+        Our Skills
+      </h2>
+      <h5 class="text-lg ml-5">
+        They need a big smile. To-morrow the gate was said to be small but
+        large. There is no airline developer. Mauris flatters the elit, needs
+        the tincidunt nibh pulvinar a. The classroom is flattering to put it
+        to God. Everyone wants to except, the price to be in lacinia, for that
+        element.
+      </h5>
+    </div>
+
+    <div class="elementor-column elementor-col-100 mt-5 w-full">
+      <div class="elementor-widget-wrap">
+        <h4 class="text-dark ml-[30%] text-2xl">Oil Massage</h4>
+        <div class="progress_bar">
+          <div class="progress_fill" data-progress="96">96%</div>
+        </div>
+        <h4 class="text-dark ml-[30%] text-2xl">Shiatsu</h4>
+        <div class="progress_bar">
+          <div class="progress_fill" data-progress="87">87%</div>
+        </div>
+        <h4 class="text-dark ml-[30%] text-2xl">Foot Massage</h4>
+        <div class="progress_bar">
+          <div class="progress_fill" data-progress="92">92%</div>
+        </div>
+        <h4 class="text-dark ml-[30%] text-2xl">Face Treatment</h4>
+        <div class="progress_bar">
+          <div class="progress_fill" data-progress="95">95%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const progressBars = document.querySelectorAll(".progress_fill");
+      progressBars.forEach((bar) => {
+        let progressValue = bar.getAttribute("data-progress");
+        bar.style.width = progressValue + "%";
+      });
+    });
+  </script>
+
+  <style>
+    .progress_bar {
+      width: 100%;
+      max-width: 270px;
+      /* Ensures the bar fits on small screens */
+      background-color: #6e5e5e;
+      border-radius: 20px;
+      margin: 10px auto;
+      /* Centers on mobile */
+      position: relative;
+      height: 30px;
+      overflow: hidden;
+    }
+
+    .progress_fill {
+      height: 100%;
+      width: 0;
+      background-color: #90ee90;
+      border-radius: 20px;
+      text-align: right;
+      padding-right: 20px;
+      line-height: 30px;
+      color: white;
+      font-weight: bold;
+      transition: width 2s ease-in-out;
+    }
+  </style>
+
+  <div class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8 font-serif">
+    <div class="max-w-lg space-y-4 text-center md:text-left">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl ml-3 sm:ml-5 relative mt-5 font-bold text-[#90EE90]">
+        Our <br />
+        Professionals
+      </h2>
+      <div class="w-full md:w-[140%] lg:w-[240%] flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+        <p class="text-lg ml-3 sm:ml-5 text-[#90EE90]">
+          Let our wonderful staff get you back on track.
+        </p>
+        <p class="text-lg">We are hiring, Do you like to work with us?</p>
+        <a href="">
+          <button type="button"
+            class="bg-[#90EE90] hover:bg-[#00FFFF] text-white font-semibold hover:text-dark py-2 px-4 border border-lime-200 hover:border-transparent inline-flex rounded-full font-serif ml-2 md:ml-0">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z"
+                clip-rule="evenodd" />
+            </svg>
+            Join Us
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-4 md:gap-[3%]">
+    <div
+      class="flex flex-col bg-[#F5F5DC] shadow-sm border border-slate-200 rounded-xl my-6 w-60 h-80 ml-0 md:ml-5 gap-4">
+      <div class="m-2.5 overflow-hidden rounded-xl h-80 flex justify-center items-center -mt-4">
+        <img class="w-full h-full object-cover" src="../assets/image/someone.jpg" alt="profile-picture" />
+      </div>
+      <div class="p-6 text-center font-serif -mt-5">
+        <h4 class="mb-1 text-xl font-semibold text-dark flex-row">
+          Sarah Janosn
+        </h4>
+        <p class="text-base text-dark">Spa Expert</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col bg-[#F5F5DC] shadow-sm border border-slate-200 rounded-xl my-6 w-60 h-80 ml-0 md:ml-5 gap-4">
+      <div class="m-2.5 overflow-hidden rounded-xl h-80 flex justify-center items-center -mt-4">
+        <img class="w-full h-full object-cover" src="../assets/image/jane.jpg" alt="profile-picture" />
+      </div>
+      <div class="p-6 text-center font-serif -mt-5">
+        <h4 class="mb-1 text-xl font-semibold text-dark flex-row">
+          Jane Doe
+        </h4>
+        <p class="text-base text-dark">Skin Care Therapist</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col bg-[#F5F5DC] shadow-sm border border-slate-200 rounded-xl my-6 w-60 h-80 ml-0 md:ml-5 gap-4">
+      <div class="m-2.5 overflow-hidden rounded-xl h-80 flex justify-center items-center -mt-4">
+        <img class="w-full h-full object-cover" src="../assets/image/Amanda.jpg" alt="profile-picture" />
+      </div>
+      <div class="p-6 text-center font-serif -mt-5">
+        <h4 class="mb-1 text-xl font-semibold text-dark flex-row">
+          Amanda Smith
+        </h4>
+        <p class="text-base text-dark">Massage Expert</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col bg-[#F5F5DC] shadow-sm border border-slate-200 rounded-xl my-6 w-60 h-80 ml-0 md:ml-5 gap-4">
+      <div class="m-2.5 overflow-hidden rounded-xl h-80 flex justify-center items-center -mt-4">
+        <img class="w-full h-full object-cover" src="../assets/image/Jennifer.jpg" alt="profile-picture" />
+      </div>
+      <div class="p-6 text-center font-serif -mt-5">
+        <h4 class="mb-1 text-xl font-semibold text-dark flex-row">
+          Jennifer Wood
+        </h4>
+        <p class="text-base text-dark">Manager</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-lg space-y-4 text-center mx-auto">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl mt-5 font-bold font-serif text-[#90EE90] w-full md:w-[80%] mx-auto">
+      Our Gallery
+    </h2>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-3 mt-8 md:gap-[1%]">
+    <img class="rounded-lg" src="../assets/image/2.jpeg" alt="" />
+    <img class="rounded-lg" src="../assets/image/3.jpeg" alt="" />
+    <img class="rounded-lg" src="../assets/image/4.jpeg" alt="" />
+    <img class="rounded-lg" src="../assets/image/5.jpeg" alt="" />
+    <img class="rounded-lg" src="../assets/image/6.jpeg" alt="" />
+  </div>
+
+  <footer class="bg-[#F5F5DC] text-white mt-5 py-10">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <!-- Logo & Contact Information -->
+        <div>
+          <img src="../assets/image/spa.png" alt="Spa Logo" class="w-40 h-auto mx-auto md:mx-0" />
+          <div class="mt-5 space-y-3">
+            <div class="flex items-center justify-center md:justify-start gap-3">
+              <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
+              </svg>
+              <p class="text-black">+885 15 213795</p>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-3">
+              <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <p class="text-black">Preah Sihanouk, Kandal NY 105</p>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-3">
+              <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
+              </svg>
+              <p class="text-black">goldenspa@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 mt-5 justify-center md:justify-start">
+            <svg class="w-8 h-8 text-gray-1 bg-black rounded-[10px]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+                clip-rule="evenodd" />
+            </svg>
+            <svg class="w-8 h-8 text-gray-1 bg-black rounded-[10px]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                clip-rule="evenodd" />
+            </svg>
+            <svg class="w-8 h-8 text-gray-1 bg-black rounded-[10px]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                clip-rule="evenodd" />
+            </svg>
+            <svg class="w-8 h-8 text-gray-1 bg-black rounded-[10px]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl text-black font-serif mb-4 mx-[100px]">Menu</h3>
+          <ul class="space-y-2 mx-[100px] text-black">
+            <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="#" class="hover:text-yellow-400">About</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Shop</a></li>
+            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Product</a></li>
+          </ul>
+        </div>
+
+        <!-- Operating Hours -->
+        <div>
+          <h3 class="text-2xl font-serif mb-4 text-black">Time</h3>
+          <ul class="space-y-2 text-black">
+            <li>Monday - Friday: 9 AM - 6 PM</li>
+            <li>Saturday: 11 AM - 3 PM</li>
+          </ul>
+        </div>
+
+        <!-- Subscription Section -->
+        <div>
+          <h3 class="text-2xl font-serif mb-4 text-black">
+            Get Fresh New From Golden Spa
+          </h3>
+          <div class="flex items-center text-black">
+            <input type="email" placeholder="Your email" id="email"
+              class="w-full p-2 rounded-l-md border border-[#00FFFF] focus:outline-none" />
+
+            <a href="" class="ml-2"><button
+                class="bg-[#00FFFF] hover:bg-[#90EE90] text-dark-700 font-semibold hover:text-dark py-2 px-4 border border-lime-200 hover:border-transparent rounded font-serif">
+                Subscribe
+              </button>
+            </a>
+          </div>
+          <p class="text-sm mt-4 text-black">
+            Subscribe to receive special offers and updates!
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 pt-5 text-black">
+        <p class="text-sm">&copy; Copyright 2025. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <!-- Menu Links -->
+  </footer>
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+</body>
+
+</html>
